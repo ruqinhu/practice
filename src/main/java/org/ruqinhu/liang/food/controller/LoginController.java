@@ -30,7 +30,7 @@ public class LoginController {
      * @return
      */
     public String login(String account, String password, String salt) {
-        //如果有全局异常处理，这里可以直接抛出指定的异常
+        //如果有全局异常处理，这里可以直接抛出指定的异常，如果需要校验的参数较多，可以抽出一个方法
         if (StringUtils.isEmpty(account) || StringUtils.isEmpty(password) || StringUtils.isEmpty(salt)) {
             return "parameter err";
         }
