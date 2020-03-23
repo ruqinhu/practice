@@ -1,12 +1,13 @@
 # 题目
 
+内测017
 
-内测17：
-
-登录相关：使用 salt 加密前后端传输的数据，增加拦截成本。
+登录相关：
+使用 salt 加密前后端传输的数据，增加拦截成本，还可以增加时间作为维度。
 
 数据结构设计：
-菜单轮播时段字段interval，半开闭设计：'8-9,9-10' 。还可以设计成 8-20 中任意时间点+终结符,示例：8#,9#,10#。代码中使用第一种方式。
+菜单轮播时段字段interval，半开闭：**'8-9,9-10**' 。
+还可以设计成 8-20 中任意时间点+终结符,示例：**8#,9#,10#**。代码中使用第一种方式。
 
 整体包结构:
 
@@ -23,3 +24,8 @@ model：模型类
 controller：控制层
 
 service：业务层
+
+思路：
+思路详情见代码注释，入口 [https://github.com/ruqinhu/practice/tree/master/src/main/java/org/ruqinhu/liang/food/controller](https://github.com/ruqinhu/practice/tree/master/src/main/java/org/ruqinhu/liang/food/controller)
+
+像这种根据时间段还可以跟复杂一点，可以像时钟一样，以 年、月、季度、周等作为周期，周期内可选单次或者多次，每次可以有不同的执行时间段。
