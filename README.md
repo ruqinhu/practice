@@ -28,4 +28,4 @@ service：业务层
 思路：
 思路详情见代码注释，入口 [https://github.com/ruqinhu/practice/tree/master/src/main/java/org/ruqinhu/liang/food/controller](https://github.com/ruqinhu/practice/tree/master/src/main/java/org/ruqinhu/liang/food/controller)
 
-像这种根据时间段还可以跟复杂一点，可以像时钟一样，以 年、月、季度、周等作为周期，周期内可选单次或者多次，每次可以有不同的执行时间段。
+像这种根据时间段解析执行的任务还可以更复杂一点，我以前遇到过类似增加闹钟任务的需求，以 年、月、季度、周等作为周期，周期内可选单次或者多次，每次可以有不同的执行时间段。
