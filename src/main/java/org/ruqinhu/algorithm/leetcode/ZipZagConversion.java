@@ -1,5 +1,18 @@
-package org.ruqinhu.algorithm;
+package org.ruqinhu.algorithm.leetcode;
 
+/**
+ * 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。
+ *
+ * 比如输入字符串为 "LEETCODEISHIRING" 行数为 3 时，排列如下：
+ *
+ * L   C   I   R
+ * E T O E S I I G
+ * E   D   H   N
+ *
+ * 优化的点：
+ * 1.思路问题，不该使用二维数组，图形化只是为了方便理解，不一定就需要按照图形来解体
+ * 2.寻找循行规律，此处行号一直有规律的在变化，所以可以使用行号作为突破口
+ */
 public class ZipZagConversion {
 
         public String convert(String s, int numRows) {
