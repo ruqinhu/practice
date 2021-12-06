@@ -21,11 +21,11 @@ public class OutPutAlphabet2 {
                     System.out.println(letters[i]);
                 }
                 lock.unlock();
-                try {
-                    Thread.sleep(200);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    Thread.sleep(200);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
             }
         }
     }
@@ -39,11 +39,11 @@ public class OutPutAlphabet2 {
                     System.out.println(letters[i]);
                 }
                 lock.unlock();
-                try {
-                    Thread.sleep(200);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    Thread.sleep(200);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
             }
         }
     }

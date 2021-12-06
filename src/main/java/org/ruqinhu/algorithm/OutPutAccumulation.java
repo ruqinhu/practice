@@ -22,11 +22,11 @@ public class OutPutAccumulation {
                 i = i + j++;
                 System.out.println(i);
                 lock.unlock();
-                try {
-                    Thread.sleep(200);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    Thread.sleep(200);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
             }
         }
     }
@@ -40,11 +40,11 @@ public class OutPutAccumulation {
                 i = i + j++;
                 System.out.println(i);
                 lock.unlock();
-                try {
-                    Thread.sleep(200);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    Thread.sleep(200);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
             }
         }
     }
@@ -58,11 +58,11 @@ public class OutPutAccumulation {
                 i = i + j++;
                 System.out.println(i);
                 lock.unlock();
-                try {
-                    Thread.sleep(200);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    Thread.sleep(200);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
             }
         }
     }
