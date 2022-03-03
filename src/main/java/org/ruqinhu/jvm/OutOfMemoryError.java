@@ -4,15 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * -Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError
- *  -XX:HeapDumpPath=D:/code/github/practice/heapdump.dump
+ * -Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError  -XX:HeapDumpPath=D:/code/github/practice/heapdump.dump
  * GC overhead limit exceeded  多次 gc 释放很少空间
  */
 public class OutOfMemoryError {
 
     static class OOMObject {}
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 //        List<OOMObject> list = new ArrayList<>();
 //        while (true) {
 //            list.add(new OOMObject());
@@ -22,6 +21,7 @@ public class OutOfMemoryError {
         List<String> list = new ArrayList<>();
         while (true) {
             list.add(String.valueOf(i++).intern());
+            Thread.sleep(10);
         }
 
     }
