@@ -26,16 +26,16 @@ public class MmapStore {
 
     public static void main(String[] args) throws IOException {
         String test = "zhaoruzne+++++++++++++";
-        int byteLength = test.getBytes(StandardCharsets.UTF_8).length;
+        Integer byteLength = test.getBytes(StandardCharsets.UTF_8).length;
         MappedByteBuffer mappedByteBuffer = getMappedByteBuffer();
-        mappedByteBuffer.put((byte) byteLength);
+        mappedByteBuffer.put(byteLength.byteValue());
         mappedByteBuffer.put(test.getBytes(StandardCharsets.UTF_8));
         mappedByteBuffer.force();
 
         MappedByteBuffer readByteBuffer = getMappedByteBuffer();
         byte[] sizeBytes = new byte[1];
         readByteBuffer.get(sizeBytes);
-        System.out.println(new String(sizeBytes, StandardCharsets.UTF_8));
+        System.out.println(sizeBytes[0] & 0xFF);  // java 总是把 byte 当作有符号处理，我们可以通过和 0xff 进行二进制与得到无符号值
         byte[] bytes = new byte[test.getBytes(StandardCharsets.UTF_8).length];
         readByteBuffer.get(bytes);
         System.out.println(new String(bytes, StandardCharsets.UTF_8));
