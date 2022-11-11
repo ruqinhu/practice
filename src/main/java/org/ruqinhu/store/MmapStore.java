@@ -39,6 +39,15 @@ public class MmapStore {
         byte[] bytes = new byte[test.getBytes(StandardCharsets.UTF_8).length];
         readByteBuffer.get(bytes);
         System.out.println(new String(bytes, StandardCharsets.UTF_8));
+
+        //  测试 splice（）
+        MappedByteBuffer mappedByteBuffer1 = getMappedByteBuffer();
+        appendMsg(mappedByteBuffer1, "ccccccccccccccccccccccccccccccccccc");
+        while(mappedByteBuffer1.hasRemaining()) {
+            System.out.println(mappedByteBuffer1.get());
+        }
+
+
     }
 
 
